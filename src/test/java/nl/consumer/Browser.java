@@ -1,7 +1,9 @@
 package nl.consumer;
 
-/**
- * Created by fillerup on 14-11-14.
- */
+        import nl.shop.Gui;
+
 public class Browser {
+
+    Gui shopGui;
+
 }
