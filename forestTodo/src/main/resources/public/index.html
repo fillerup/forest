@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="store">
+<head>
+  <meta charset="UTF-8">
+  <title> AngularJS Example Store </title>
+  <link rel="stylesheet" href="styles/bootstrap.min.css" type="text/css">
+</head>
+<body class="container" ng-controller="ToDoCtrl as todo">
+      <h3> {{todo.model.user}}'s Todo List
+        <span class="label label-success" ng-hide="incompleteCount() == 0">
+          {{todo.incompleteCount()}}
+        </span>
+      </h3>
+      <div class="input-group">
+          <input class="form-control" ng-model="actionText"/>
+            <span class="input-group-btn">
+                <button class="btn btn-default" ng-click="todo.addNewItem(actionText)">Add</button>
+            </span>
+      </div>
+      <table class="table table-striped">
+          <thead>
+          <tr>
+              <th>Description</th>
+              <th>Check</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr ng-repeat = "item in todo.model.items | checkedItems:showComplete">
+              <td>{{item.action}}</td>
+              <td><input type="checkbox" ng-model="item.done" /></td>
+          </tr>
+          </tbody>
+      </table>
+      <div class="checkbox-inline">
+          <label><input type="checkbox" ng_model="showComplete"> Show Complete</label>
+      </div>
+
+  <script type="text/javascript" src="scripts/angular.min.js"></script>
+  <script type="text/javascript" src="scripts/app.js"></script>
+</body>
+</html>

@@ -19,7 +19,7 @@
         </dependencies>
 
         <properties>
-            <start-class>nl.forestPets.ForestPetsMain</start-class>
+            <start-class>nl.forestTodo.ForestTodoMain</start-class>
         </properties>
 
         <build>
