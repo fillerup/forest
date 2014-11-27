@@ -9,9 +9,9 @@ public class Items {
     public Items() {
         items = new ArrayList<Item>();
 
-        items.add(new Item("Write angular demo app", false));
-        items.add(new Item("Write the backend", false));
-        items.add(new Item("Connect frontend with backend", false));
+        items.add(new Item("Write angular demo app", true));
+        items.add(new Item("Write the backend", true));
+        items.add(new Item("Connect frontend with backend", true));
         items.add(new Item("Write a test driver for the FE", false));
         items.add(new Item("Add Testing with cucumber", false));
         items.add(new Item("Write a test driver for the BE ", false));
