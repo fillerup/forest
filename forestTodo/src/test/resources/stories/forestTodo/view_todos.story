@@ -13,5 +13,3 @@ Scenario: Checking a todo item
 When I go to the todo page
 And I check the first item on the list
 Then The first item disapears from the list
-
-
