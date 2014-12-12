@@ -1,13 +1,14 @@
-package nl.forestTodo;
+package nl.forestTodo.drivers;
 
+import nl.forestTodo.interfaces.TodoPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class SeleniumTodoPage {
+public class TodoPageDriver implements TodoPage{
 
     WebDriver driver;
 
-    public SeleniumTodoPage(WebDriver driver) {
+    public TodoPageDriver(WebDriver driver) {
         this.driver = driver;
     }
 
@@ -24,15 +25,19 @@ public class SeleniumTodoPage {
     }
 
     public String getDisplayedActionNumber(int number) {
+        return driver.findElement(By.id("incompleteCount")).getText();
     }
 
     public void addAction(String action) {
+
     }
 
     public void showCompleted(boolean showThem) {
     }
 
-    public void completeAction(boolean completed) {
+    @Override
+    public void completeAction(boolean completed, int id) {
+
     }
 
 }
