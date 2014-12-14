@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 public class Items {
 
-    public ArrayList<Item> items;
+    public static Items items = new Items();
 
-    public Items() {
+    private ArrayList<Item> itemList;
+    
+    private Items() {
         items = new ArrayList<Item>();
 
         items.add(new Item("Write angular demo app", true));
@@ -29,6 +31,10 @@ public class Items {
     }
 
     public ArrayList<Item> getItems() {
-        return items;
+        return itemList;
+    }
+
+    public void addItem(String action) {
+        itemList.add(new Item(action, false));
     }
 }

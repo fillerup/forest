@@ -7,7 +7,7 @@
 </head>
 <body class="container" ng-controller="ToDoCtrl as todo">
       <h3> {{todo.model.user}}'s Todo List
-        <span class="label label-success" ng-hide="incompleteCount() == 0">
+        <span id="incompleteCount" class="label label-success" ng-hide="incompleteCount() == 0">
           {{todo.incompleteCount()}}
         </span>
       </h3>
@@ -17,7 +17,7 @@
                 <button class="btn btn-default" ng-click="todo.addNewItem(actionText)">Add</button>
             </span>
       </div>
-      <table class="table table-striped">
+      <table id="actionTable" class="table table-striped">
           <thead>
           <tr>
               <th>Description</th>
@@ -26,13 +26,13 @@
           </thead>
           <tbody>
           <tr ng-repeat = "item in todo.model.items | checkedItems:showComplete">
-              <td>{{item.action}}</td>
-              <td><input type="checkbox" ng-model="item.done" /></td>
+              <td id="todoAction[{{$index}}]">{{item.action}}</td>
+              <td><input id = "todoCheckbox[{{$index}}]" type="checkbox" ng-model="item.done" /></td>
           </tr>
           </tbody>
       </table>
       <div class="checkbox-inline">
-          <label><input type="checkbox" ng_model="showComplete"> Show Complete</label>
+          <label><input id="showComplete" type="checkbox" ng_model="showComplete"> Show Complete</label>
       </div>
 
   <script type="text/javascript" src="scripts/angular.min.js"></script>
