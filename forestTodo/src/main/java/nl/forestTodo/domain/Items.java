@@ -12,8 +12,11 @@ public class Items {
         items.add(new Item("Write angular demo app", true));
         items.add(new Item("Write the backend", true));
         items.add(new Item("Connect frontend with backend", true));
+        items.add(new Item("Learn Git, true", true));
+        items.add(new Item("Advanced JUnit", true));
+        items.add(new Item("Spring test", false));
+        items.add(new Item("Add Testing with Jbehave", false));
         items.add(new Item("Write a test driver for the FE", false));
-        items.add(new Item("Add Testing with cucumber", false));
         items.add(new Item("Write a test driver for the BE ", false));
         items.add(new Item("Write a simulator for the FE", false));
         items.add(new Item("Write a simulator for the BE", false));
@@ -22,6 +25,7 @@ public class Items {
         items.add(new Item("Create a mock generator that uses test data", false));
         items.add(new Item("Create a configuration tool/format", false));
         items.add(new Item("Create a test runner that uses the configuration", false));
+        items.add(new Item("Docker, deploying, chef?, ansible, ", false));
     }
 
     public ArrayList<Item> getItems() {
