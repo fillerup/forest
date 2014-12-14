@@ -1,0 +1,33 @@
+I'm thinking about a multi module directory structure.
+
+First a single module:
+
+/src
+/src/main
+/src/main/java
+/src/main/resources
+/src/test/java
+/src/test/resources
+
+In the test/resources there are the stories.
+I will add:
+Test Data
+
+In test/java there are:
+Features/Application
+Story objects. (Implement the exact text of given/when/then)
+Step objects. These seem to represent users. I like this concept.
+Page objects.
+
+Unit tests.
+
+I will add:
+Simulators (these are copies of the page objects that simulate instead of actually do stuff.)
+    A simulator needs another backend. Either another simulator, or a live implementation.
+
+
+
+In generated there are:
+Mocks
+Recorders
+
